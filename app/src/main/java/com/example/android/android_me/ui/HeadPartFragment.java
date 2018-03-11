@@ -1,3 +1,19 @@
+/*
+* Copyright (C) 2017 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*  	http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
 package com.example.android.android_me.ui;
 
 import android.os.Bundle;
@@ -12,11 +28,7 @@ import com.example.android.android_me.R;
 
 import java.util.List;
 
-/**
- * @author Sergey Pinkevich
- */
-
-public class BodyPartFragment extends Fragment {
+public class HeadPartFragment extends Fragment {
 
     private List<Integer> mImageIDs;
     private int currentIndex = 0;
@@ -29,7 +41,11 @@ public class BodyPartFragment extends Fragment {
         this.currentIndex = currentIndex;
     }
 
-    public BodyPartFragment() {}
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the fragment
+     */
+    public HeadPartFragment() {
+    }
 
     /**
      * Inflates the fragment layout file and sets the correct resource for the image to display
@@ -38,10 +54,10 @@ public class BodyPartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the Android-Me fragment layout
-        View rootView = inflater.inflate(R.layout.fragment_body_part, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_head_part, container, false);
 
         // Get a reference to the ImageView in the fragment layout
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+        ImageView imageView = (ImageView) rootView.findViewById(R.id.head_part_image_view);
 
         // Otherwise, create a Log statement that indicates that the list was not found
         if (mImageIDs != null) {
@@ -53,4 +69,5 @@ public class BodyPartFragment extends Fragment {
         // Return the rootView
         return rootView;
     }
+
 }

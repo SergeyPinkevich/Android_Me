@@ -16,7 +16,7 @@ import java.util.List;
  * @author Sergey Pinkevich
  */
 
-public class BodyPartFragment extends Fragment {
+public class LegPartFragment extends Fragment {
 
     private List<Integer> mImageIDs;
     private int currentIndex = 0;
@@ -29,7 +29,7 @@ public class BodyPartFragment extends Fragment {
         this.currentIndex = currentIndex;
     }
 
-    public BodyPartFragment() {}
+    public LegPartFragment() {}
 
     /**
      * Inflates the fragment layout file and sets the correct resource for the image to display
@@ -38,10 +38,10 @@ public class BodyPartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the Android-Me fragment layout
-        View rootView = inflater.inflate(R.layout.fragment_body_part, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_leg_part, container, false);
 
         // Get a reference to the ImageView in the fragment layout
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+        ImageView imageView = (ImageView) rootView.findViewById(R.id.leg_part_image_view);
 
         // Otherwise, create a Log statement that indicates that the list was not found
         if (mImageIDs != null) {
