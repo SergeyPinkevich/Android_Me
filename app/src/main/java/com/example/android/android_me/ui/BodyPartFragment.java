@@ -31,7 +31,6 @@ import java.util.List;
 
 public class BodyPartFragment extends Fragment {
 
-    // TODO (3) Create final Strings to store state information about the list of images and list inde
     public static final String IMAGE_IDS = "Image_IDs";
     public static final String CURRENT_INDEX = "current_index";
 
